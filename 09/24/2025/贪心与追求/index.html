@@ -1,0 +1,667 @@
+
+ <!DOCTYPE HTML>
+<html lang="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="p4_PyV0Sa65YA97lyee36teISPCXNiPwWPeT3o7zrKo" />
+  <meta name="baidu-site-verification" content="EyWRb9XBcG" />
+  
+    <title>贪心与追求 | Clothes&#39; Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Clothes">
+    
+
+    
+    <meta name="description" content="过去破碎的自己似乎又被慢慢拼起来了，虽然还在等待风干一碰又碎，但胶水还在花些时间总还能粘起来。不如说因为我找到了生活的胶水——安心感，所以允许自己反复破裂塑形，调整至自己最为舒适的状态。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心与追求">
+<meta property="og:url" content="http://clothes4u.github.io/09/24/2025/%E8%B4%AA%E5%BF%83%E4%B8%8E%E8%BF%BD%E6%B1%82/index.html">
+<meta property="og:site_name" content="Clothes&#39; Home">
+<meta property="og:description" content="过去破碎的自己似乎又被慢慢拼起来了，虽然还在等待风干一碰又碎，但胶水还在花些时间总还能粘起来。不如说因为我找到了生活的胶水——安心感，所以允许自己反复破裂塑形，调整至自己最为舒适的状态。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-09-24T01:54:00.000Z">
+<meta property="article:modified_time" content="2025-09-24T03:51:25.000Z">
+<meta property="article:author" content="Clothes">
+<meta property="article:tag" content="Greedy">
+<meta property="article:tag" content="Life">
+<meta property="article:tag" content="Pursue">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Clothes&#39; Home" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Clothes&#39; Home" title="Clothes&#39; Home"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Clothes&#39; Home">Clothes&#39; Home</a></h1>
+				<h2 class="blog-motto">All over the place is six pence, but I&#39;m looking up at the moon.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Essays(in Chinese)</a></li>
+					
+						<li><a href="/about">About Me</a></li>
+					
+						<li><a href="/heartbridge">HeartBridge</a></li>
+					
+					<li>
+ 					
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+					
+					</li>
+				</ul>
+			</nav>	
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','VYGxwX4DsakZ81hYY2qD','2.0.0');
+</script>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/09/24/2025/贪心与追求/" title="贪心与追求" itemprop="url">贪心与追求</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Clothes" target="_blank" itemprop="author">Clothes</a>
+		
+  <p class="article-time">
+
+</span>
+    <time datetime="2025-09-24T01:54:00.000Z" itemprop="datePublished"> Published 09/24/2025</time>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+		
+		
+		</div>
+		
+		<p>　　过去破碎的自己似乎又被慢慢拼起来了，虽然还在等待风干一碰又碎，但胶水还在花些时间总还能粘起来。不如说因为我找到了生活的胶水——安心感，所以允许自己反复破裂塑形，调整至自己最为舒适的状态。</p>
+<span id="more"></span>
+<p>　　当下并无新的痛苦之源时，我要面对的是如何安顿过去的失败，不再用过去的无力来惩罚现今的自己。而对于未来，心高气傲贪心过大容易再生痛苦，而平静无波澜又并非我所追求的，理出一条主线，删除或者遮蔽掉旁支，是我过去一直以来的操作方式，如今也许审视是否值得继续贯彻。</p>
+<p>　　安顿过去的失败是一件令人恐惧的事，光是想想便会让我有些战栗。这意味着失败被钉上了个人历史之柱，只被审视而不再被翻开。前些天看dota2的比赛，逐渐领悟ban and pick的精髓，多练几手自己的绝活，达到不ban便能容易获胜，让对手不得不ban，而对手的绝活也需要尊重，该ban就ban，有时ban完之后对手反而不知道怎么打了，局势便一边倒了。过往我的操作是自己ban掉自己的绝活，被迫让自己练出新的绝活，以达到“技多不压身”或者我所谓的“工具箱”的效应。而生活或者他人自有另一些绝活，强强对抗时往往仍有些吃力甚至挫败。我最终发明了“人性的弱点”这个框，处理不了的规律便往里丢，尊重“人性的弱点”，正如尊重对手（世界、生活）的绝活。</p>
+<p>　　但生活并不是比赛，一种观点觉得生活就过那几个精彩的瞬间，在那时把握机会成就自我便足够。而我则关注绵延的生活，甚至希望生活的每一天每一刻都能被我自己赋予意义，由此回顾与展望时不会大而化之地说“时间过得真快”，而是在回忆中寻找出各种细节。</p>
+<p>　　此外我也推崇迎难而上，认为某些大的困难课题总是要面对的，早些处理掉，还能领略山后更高山的风景。我也总被人说“急”、“要求高”，因为我总想看看自己这辈子究竟能整出多少常人甚至过去的自己想想不到的活吧。</p>
+<p>　　这是一种贪心，但有时也会被叫作进取心，其差别在于想与做的一致与否。想大幅超越了做便为贪心，甚至在安逸的环境里光想想就会很爽，一直想一直爽，便已经走向自嗨了。我总分不清他人是否在口嗨，因为我自己不太练习，或者说我的某些随意时说出话也会被他人理解或误解成口嗨，因为口嗨的效果需要当事人不在意才能体现。那此时判别他人是否口嗨的方式便不是在一字一句上纠缠，而是发掘对方在意的东西，与表述做比较来反推是否在口嗨。</p>
+<p>　　对自己的诚实，或者说将没有外人在时的自嗨限定在合理的范围，倒是更为困难的课题，因为外人能当作镜子，而自我面对自身时没有镜子，需要找一些线索来判别，而且时在自嗨时理性被抑制时发现，所以需要足够显然与直接。许下宏愿当然是一种自嗨，因为提前兑现了宏愿实现时的快乐，但真要做时因为与外人无关，所以可以随时放弃，甚至最爽的部分已经体验过了，更没什么动力前进下去。完美主义在我经过长久的自我斗争后，终于将其判定为自嗨的一种，因为没有实际意义上的完美，只有幻觉意义上的完美。习得性无助与完美主义倒是一体两面，贪心时在两端摇摆，而走向实事时便会向具体的成效一步步地收敛。</p>
+<p>　　有外力限制时，总可以推卸责任到外部，以反抗为方式延缓自身的缺陷。如此一想，或许当够了勇者后，试试魔王也不错。虽然这是一种控制感的幻觉，如果魔王的愿望是给勇者设置适当阻碍培养其能力，对我而言只是余兴节目。魔王象征着在勇者阶段追着对抗的对象，而魔王则需要指向自身，想想磨砺出的力量与突破束缚后的自由要往什么方向施展。或者说得更抽象些，对抗自由本身，将与生俱来被赋予的自由实现为具体的样态，让其凝结成一个个“愿望”的“实现”。当愿望本身消散时，便不得不面对虚无的大背景板。所以有时一个虚无缥缈的愿望，也比虚无本身更能激活人活下去的意志。</p>
+<p>　　回到所谓的过去的失败吧，第一反应是想到过往的容器论，但实际上容器论已然翻篇，那一刻无法应对的困难在后续都以妥善的解决，甚至如今所要面对的都不是容器崩解那一刻的重大失败，而是过往面对这一失败付出的各种努力与尝试，夹杂着前进与倒退，在如今对“失败”这一本体已经有了些许定论时，应当如何整合与看待。这类似于书后拆线，有些线不必拆，能够自然吸收，而有些线不拆还是会硌得慌，让人在恢复后总是想起过往。</p>
+<p>　　在感情或者与他人的关系这一议题中，实际上线都拆得差不多了，表层意识中我也无甚遗憾，只是再向前走时还未勾勒出蓝图而是准备先四处游荡一番。如同过往多个城市连续旅行一般，也先练就一身闯入城市，展开一段经历，兴尽后便保留回忆走向下一站的本事。对待一些有历史的根的感情很难做到这点，类似于情感层面的故乡，只能淡化，无法回避与割舍。而对于新遇到的城市，倒是来去自如。这种比喻下，过往“旅居”的生活，延伸到如今与人关系的旅居。我并非暗指热门单品“situationship”（情境关系），因为这个词对我而言与“特种兵旅行”一般粗浅，没有抓住处于这种状态中的人的内心所求，而只是描述现象，让局外人迷惑。让我自己生造词，会觉得“情旅”更为贴切，像是感情中的青旅，一段并不走向情侣，希望相互珍重，或者相忘于江湖的关系。旅居的终点是将北京作为了定居的城市，情旅的尝试最终也指向一段稳定的关系。旅居过程中，我会经常问自己一个问题并展开想象——这里适不适合定居——试图明白自己的第一反应和最终心意。在这个问题下，特种兵的打卡反而有些令人疲惫，而本无意定居的城市最多让我停留半天到一天。在这个比喻下，身边的旅伴有时倒能激发出城市的魅力，一人、两人、多人的出行也各有优势。在感情的旅途中，我也需要尝试与切换适应多人聚会时被激发的状态与两人独处时的私人关系，过往的经历曾让我逐渐排斥多人聚会，因为我发觉人们总是各怀鬼胎，如今发觉两人的关系也需要多人的状态去激发另一面，也就是说，我也变成了怀鬼胎的那一位，此时多人关系似乎终于变得公平了。我把多人关系中怀鬼胎这一现象纳入了人性的弱点这个框后，只能尊重，非ban即选了。这或许是一种对失败的承认，给过去的自己一个并不体面的交代，但能让现在的自己好受一点的选择。</p>
+<p>　　对他人的期待经由上述承认大幅下降，这也会大幅削弱原本强烈的控制欲。我相信未来某一刻我能成长到在大家各怀鬼胎时仍能引导场面向我偏好的方向发展，这是几个月前对“空间”建设的最终期许，但我认为这一愿望向前迈进的前提是我自身便已大致自足，出于乐趣与开拓可能性时，无目的性的做这个事才能实现，如今自足的环境包含定居的住所，亦即“家”，所以我也只能在此处展开小型的试点。此处突然联想到罗小黑战记中的“灵质空间”，在自己的空间里，可以随心所欲地控制各种东西，所以一般不能随意地进入他人的空间，但双方足够信任时，在空间里能够施展更多的可能性。在平时，这个空间可能最多拿来存放保有过去记忆的物件。当我感到有自己的家时，终于有了属于自己的“空间”，我便可以一方面拓展自己空间的大小，甚至学习空间外放的“领域”技能，另一方面在空间之外利用空间打出一些配合。</p>
+<p>　　对他人控制欲的削弱，让我转向了对自己的控制欲，此处并非完美主义的精准刻度，也非感情意义上的情绪稳定，而只限于事业。由于我已模糊地感到未来我的事业中包含数学科研外的更多的部分，所以如今实际上只是将控制欲限定在数学科研上，体现为在某月某日前完成某项工作，或者在未来的不定期期限内完成尽可能多的工作。这也是不肯面对过往三年科研前行上阶段性失败的体现，希望照搬再三年前的较为成功的经验来复刻成功。而实际上时过境迁，我遇到的学术难度也与当时不可同日而语。在阶段性失败后，重新找到自我评价与规划的准绳是困难的，延续习得性无助以及早先的自我剥削模式都不可取。</p>
+<p>　　如今我唯一摸索出的值得采纳的心态便是“挑食学”，这来自于近四个月纯靠饮食毫无运动减下十斤的体会。在明确自己本身的饮食偏好便很健康，无需应合北京当地或者他人的饮食习惯反倒更有益时，我便选择了ban掉绝对有问题的糖与零食，在一日三餐中挑选自己爱吃的东西。我本身喜好蔬菜与水产，然后是鸡鸭肉。在美国找到蔬菜是困难难度，找到水产是地狱难度，所以姜爆鸭丝成了我最喜欢的一道菜。在北京找到蔬菜和鸡肉倒是很轻松，水产和鸭肉则稍微困难些。在这一偏好下，我只需要挑剔地在一桌菜里只吃我喜欢的东西，尽可能少地看人脸色多吃菜，便自然能瘦。由此我对敬酒学的理解已然提升至敬菜学，看人脸色多吃几口不那么偏好的菜，我自己没啥损失倒也能表示尊重，但这已经属于应酬的部分，可以报个“工伤”了。对于应酬，我过往已有成熟的应对方案：当我能接受不参加应酬的后果时，我便不必去，所以我要做的只是提升自己的抗风险能力，而非积极参加应酬，因为我也并不擅长这些。</p>
+<p>　　过往我实际上已经潜在地将挑食学应用到数学科研中，如减少不甚感兴趣的课题尝试，以及不再疲于参加各种会议。只是少了一份“这么做一定能瘦”对应的“这么做一定能做好数学”的自信。当然自信是积累出来的，我也是在一两个月后发现月均下降2.5斤的规律后才越发放心大胆。此前我在生活层面上的自信不甚充足，便仍抱着过往的方式去应对数学科研，如今得大胆地推导重建，像此前“设计生活”一般，尝试塑造新的科研状态。在过往的经历中，我已明确甚至坚定自己热爱数学，以及明确地知道自己喜欢哪个风格、哪种方式的数学，只是还没有足够的自信去贯彻罢了。此处的自信是当下的自我面对三年前的自我，实际上没有外人。过往自我剥削的科研方式实际上也不为外人所理解，但确实达到了过往的我想要的效果，如今过往的数学科研也大致能够告一段落（虽然始终处于未完成状态，这是一直以来的痛点），但我需要允许未完成，转向新的模式了。</p>
+<p>11:50 2025年9月24日<br>试图咽下过去失败成果的<br>叶风来</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Clothes-Dairy/">Clothes' Dairy</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Life/">Life</a><a href="/tags/Greedy/">Greedy</a><a href="/tags/Pursue/">Pursue</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://clothes4u.github.io/09/24/2025/%E8%B4%AA%E5%BF%83%E4%B8%8E%E8%BF%BD%E6%B1%82/" data-title="贪心与追求 | Clothes&#39; Home" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/10/07/2025/协商与争取/" title="协商与争取">
+  <strong>上一篇：</strong><br/>
+  <span>
+  协商与争取</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/09/04/2025/成长与代价/"  title="成长与代价">
+ <strong>下一篇：</strong><br/> 
+ <span>成长与代价
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+<section id="comments" class="comment">
+​
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+​
+        s.src = 'https://fs-truth.disqus.com/embed.js';
+​
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener">comments powered by Disqus.</a></noscript>
+  
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Clothes-Dairy/" title="Clothes&#39; Dairy">Clothes&#39; Dairy<sup>127</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/书后闲想/" title="书后闲想">书后闲想<sup>51</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/哲学论文/" title="哲学论文">哲学论文<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/总集/" title="总集">总集<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/科研随笔/" title="科研随笔">科研随笔<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/观影所思/" title="观影所思">观影所思<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/迷之活动/" title="迷之活动">迷之活动<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/闲想回顾/" title="闲想回顾">闲想回顾<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Life/" title="Life">Life<sup>127</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Review/" title="Review">Review<sup>56</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Future/" title="Future">Future<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Happiness/" title="Happiness">Happiness<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Philosophy/" title="Philosophy">Philosophy<sup>24</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Friends/" title="Friends">Friends<sup>17</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Birthday/" title="Birthday">Birthday<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/庄子/" title="庄子">庄子<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Love/" title="Love">Love<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Time/" title="Time">Time<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Survival/" title="Survival">Survival<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Math/" title="Math">Math<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Research/" title="Research">Research<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Friend/" title="Friend">Friend<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/毛姆/" title="毛姆">毛姆<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Dream/" title="Dream">Dream<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Sylloge/" title="Sylloge">Sylloge<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Trust/" title="Trust">Trust<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Limit/" title="Limit">Limit<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/康德/" title="康德">康德<sup>3</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <p class="asidetitle">Hot</p>
+<!-- ��˵�������� start -->
+	<div class="ds-top-threads" data-range="monthly" data-num-items="5"></div>
+<!-- ��˵�������� end -->
+<!-- ��˵����JS���� start (һ����ҳֻ�����һ��) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"clothes4u"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- ��˵����JS���� end -->
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi, I&#39;m Fan Ye. Would you become my friend? <br/>
+			P.S. YF has the same initials as Yi Fu, which means Clothes in Chinese. That&#39;s the source of the website&#39;s name.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		<a href="https://www.facebook.com/profile.php?id=100011679850143" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		
+		
+		
+		
+		<a href="mailto:cclothes@mit.edu" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2026 
+		
+		<a href="/about" target="_blank" title="Clothes">Clothes</a>
+		
+		
+		</p>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span>times</span>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+<script type="text/javascript">
+
+var disqus_shortname = 'faniel';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78689387-1', '');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
